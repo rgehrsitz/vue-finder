@@ -165,6 +165,7 @@ export default {
     },
     onClick() {
       this.treeModel.expandNode(this.node.id, "click");
+      this.$emit('node-clicked', this.node); // Emit an event with the node details
     },
     onFocus() {
       if (!this.mousedown) {
